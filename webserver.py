@@ -1,16 +1,21 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
+from urllib.parse import parse_qs, urlparse
+
 
 hostName = "localhost"
 serverPort = 8080
 
+
 class MyServer (BaseHTTPRequestHandler):
 
     def do_GET(self):
+        query_components = parse_qs(urlparse(self.path).query)
+        with open('index.html', 'r', encoding='utf-8') as file:
+            page_content = file.read()
         self.send_response(200)
-        self.send_header ("Content-type", "application/json")
-        self.end_headers ()
-        self.wfile.write(bytes("{'message': 'OK'}", "utf-8"))
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(bytes(page_content, "utf-8"))
 
 
 if __name__=="__main__":
