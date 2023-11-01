@@ -266,9 +266,11 @@
             </div>
         </header>
 
-        <main class="row">
-            <div class="row text-center">
-                <div class="col-4">
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <div class="row">
+
+                <div class="col-6">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
                             <h4 class="my-0 fw-normal">Товар 1</h4>
@@ -281,12 +283,69 @@
                                 Email support,
                                 Help center access
                             </p>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+                            <button type="button" class="btn btn-success">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Имя</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="например, Иван Иванов">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="например, ivanov@gmail.com">
+                    </div>
+                    <button type="button" class="btn btn-success">Отправить</button>
+                </div>
+
+                <p class="col-12">
+                <h3>F.A.Q. - Часто Задаваемые Вопросы</h3>
+                <div class="d-grid gap-2 col-4 mx-auto">
+                    <a class="btn btn-primary btn-lg" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                       aria-expanded="false" aria-controls="multiCollapseExample1">Как купить?</a>
+                </div>
+                <div class="d-grid gap-2 col-4 mx-auto">
+                    <a class="btn btn-primary btn-lg" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button"
+                       aria-expanded="false" aria-controls="multiCollapseExample2">Как доставить?</a>
+                </div>
+                <div class="d-grid gap-2 col-4 mx-auto">
+                    <a class="btn btn-primary btn-lg" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
+                       aria-expanded="false" aria-controls="multiCollapseExample1">Какая гарантия?</a>
+                </div>
+                </p>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="card card-body">
+                                <p>Мы расположены по следующим адресам:</p>
+                                <p>г. Москва, Варшавское шоссе, 153</p>
+                                <p>г. Санкт-Петербург, Невский проспект, 71</p>
+                                <p>г. Омск, улица В.Ф.Маргелова, 237</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            <div class="card card-body">
+                                <p>Напишите нам на электронный ящик: company@company.com, указав адрес и телефон. Наша служба доставки свяжется для согласования даты и времени доставки.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="collapse multi-collapse" id="multiCollapseExample3">
+                            <div class="card card-body">
+                                <p>Гарантия от 1 года на все товары.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </div>
+
+
 
     </div>
 

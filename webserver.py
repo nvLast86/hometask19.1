@@ -9,7 +9,6 @@ serverPort = 8080
 class MyServer (BaseHTTPRequestHandler):
 
     def do_GET(self):
-        query_components = parse_qs(urlparse(self.path).query)
         with open('index.html', 'r', encoding='utf-8') as file:
             page_content = file.read()
         self.send_response(200)
